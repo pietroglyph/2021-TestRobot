@@ -1,8 +1,5 @@
 package com.spartronics4915.frc;
 
-import com.spartronics4915.frc.commands.ExampleCommand;
-import com.spartronics4915.frc.subsystems.ExampleSubsystem;
-import com.spartronics4915.lib.subsystems.SpartronicsSubsystem;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import edu.wpi.first.wpilibj.GenericHID;
@@ -21,15 +18,11 @@ import edu.wpi.first.wpilibj2.command.Command;
 public class RobotContainer
 {
     // The robot's subsystems and commands are defined here...
-    public final ExampleSubsystem mExampleSubsystem;
-    public final ExampleCommand mAutoCommand;
 
     /** The container for the robot. Contains subsystems, OI devices, and commands. */
     public RobotContainer()
     {
         // ...and constructed here.
-        mExampleSubsystem = ExampleSubsystem.getInstance();
-        mAutoCommand = new ExampleCommand(mExampleSubsystem);
 
         configureButtonBindings();
         SmartDashboard.putString("Container","Completed");
@@ -45,6 +38,6 @@ public class RobotContainer
      */
     public Command getAutonomousCommand()
     {
-        return mAutoCommand;
+        return null;
     }
 }
